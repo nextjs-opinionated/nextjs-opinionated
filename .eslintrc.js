@@ -7,7 +7,7 @@ module.exports = {
   plugins: ['prettier'],
   extends: [
     'next',
-    'next/core-web-vitals',
+    // 'next/core-web-vitals',
     'eslint-config-blvd/react',
     // 'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',

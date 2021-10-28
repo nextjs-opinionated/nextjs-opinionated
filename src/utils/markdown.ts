@@ -4,6 +4,9 @@ import prism from 'remark-prism'
 import { VFileCompatible } from 'vfile'
 
 export const markdownToHtml = async (markdown: VFileCompatible) => {
-  const result = await remark().use(html).use(prism).process(markdown)
+  const result = await remark()
+    .use(html)
+    .use(prism)
+    .process(markdown as any)
   return result.toString()
 }

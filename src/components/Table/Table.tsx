@@ -8,14 +8,12 @@ import _ from 'lodash'
 
 export type TableProps<LINE_TYPE> = {
   data: LINE_TYPE[]
-  fields: Partial<
-    {
-      [key in keyof LINE_TYPE]: {
-        label: string
-        getNode: (item: LINE_TYPE) => React.ReactNode
-      }
+  fields: Partial<{
+    [key in keyof LINE_TYPE]: {
+      label: string
+      getNode: (item: LINE_TYPE) => React.ReactNode
     }
-  >
+  }>
   className?: string
   pageSize?: number
   currentPage?: number
