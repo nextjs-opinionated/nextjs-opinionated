@@ -2,12 +2,8 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import toNumber from 'lodash/toNumber'
 import { Fetch_tester_api_get } from '../../../model/api-models/typed-fetch-examples/Fetch_tester_api_get'
 import { HttpStatusCode } from '../../../utils/typedFetch/HttpStatusCode'
-import { withSentry } from '@sentry/nextjs'
 
-export default withSentry(async function fetch_tester_api_get(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export default async function fetch_tester_api_get(req: NextApiRequest, res: NextApiResponse) {
   // input data
   const inputData = req.query as Fetch_tester_api_get['input']
 
@@ -30,4 +26,4 @@ export default withSentry(async function fetch_tester_api_get(
     division_result: result,
   }
   res.status(HttpStatusCode.OK_200).json(output)
-})
+}
