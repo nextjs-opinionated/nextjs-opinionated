@@ -18,11 +18,6 @@ export default logMiddleware(async function API(req: NextApiRequest, res: NextAp
     res.status(HttpStatusCode.METHOD_NOT_ALLOWED_405).end(`Method ${req.method} Not Allowed`)
   }
 
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET'])
-    res.status(HttpStatusCode.METHOD_NOT_ALLOWED_405).end(`Method ${req.method} Not Allowed`)
-  }
-
   const inputData = req.query as List_Item_api_get['input']
 
   // THIS IS JUST A SIMULATION
