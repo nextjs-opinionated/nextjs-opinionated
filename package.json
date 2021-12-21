@@ -36,7 +36,7 @@
     "push": "yarn checkAll && git push"
   },
   "dependencies": {
-    "@auth0/nextjs-auth0": "^1.6.1",
+    "@auth0/nextjs-auth0": "^1.6.2",
     "@headlessui/react": "^1.4.1",
     "@hookform/resolvers": "^2.8.2",
     "@tailwindcss/forms": "^0.3.4",
@@ -64,7 +64,7 @@
     "sweetalert2": "^11.1.9",
     "sweetalert2-react-content": "^4.2.0",
     "uuid": "^8.3.2",
-    "validator": "^13.6.0",
+    "validator": "^13.7.0",
     "vfile": "^5.1.1",
     "zod": "^3.11.6"
   },
